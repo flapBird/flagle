@@ -11,14 +11,14 @@ import { ToastContainer, Flip } from "react-toastify";
 import { EndModal } from "./EndModal";
 import 'react-toastify/dist/ReactToastify.css';
 import { toast } from "react-toastify";
-
+import FAQ from './FAQ'; // 引入 FAQ 组件
 
 const DELAY_TIME = 0.5;
 
 const CentreWrapper = styled.div`
   margin: 0;
   position: absolute;
-  overflow: hidden;
+  overflow: auto;
   padding: 0;
   width: 100%;
   height: 100%;
@@ -296,6 +296,7 @@ function App(props) {
             <Guess key={index}>{guess.name} | {formatDistance(guess.distance)} | {getDirectionEmoji(guess)}</Guess>
           ))}
         </GuessGrid>
+        <FAQ /> 
       </CentreWrapper>
     </div>
   );
